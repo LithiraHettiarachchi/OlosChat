@@ -1,14 +1,10 @@
 import Link from "next/link";
-import ChatDemo from "./ChatDemo";
+import InteractiveBackground from "./InteractiveBackground";
 
 export default function HeroSection() {
     return (
-        <section className="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
-            {/* Background gradients */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
-                <div className="absolute top-20 left-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10 animate-pulse" />
-                <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl -z-10 animate-pulse [animation-delay:2s]" />
-            </div>
+        <section className="relative overflow-hidden pt-44 pb-20 lg:pt-56 lg:pb-32">
+            <InteractiveBackground />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
@@ -39,7 +35,7 @@ export default function HeroSection() {
                                 Get Started Free
                             </a>
                             <Link
-                                href="#demo"
+                                href="#ai-chat"
                                 className="w-full sm:w-auto px-8 py-3.5 bg-white border border-neutral-border hover:bg-gray-50 text-foreground rounded-xl font-medium transition-all"
                             >
                                 Watch Demo
@@ -58,27 +54,23 @@ export default function HeroSection() {
                         </div>
                     </div>
 
-                    {/* Visual Content (Chat Demo) */}
+                    {/* Visual Content (Image) */}
                     <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none perspective-1000">
-                        {/* Decorative blob behind chat */}
+                        {/* Decorative blob behind image */}
                         <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/10 rounded-[3rem] blur-2xl -z-10 transform rotate-6 scale-95 opacity-70"></div>
 
-                        <div className="relative transform transition-all duration-500 hover:scale-[1.01]">
-                            <ChatDemo />
+                        <div className="relative transform transition-all duration-500 hover:scale-[1.01] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50">
+                            <img
+                                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1740&auto=format&fit=crop"
+                                alt="Woman chatting on mobile phone"
+                                className="w-full h-auto object-cover"
+                            />
+
+                            {/* Overlay gradient for text readability if needed, or just style */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
                         </div>
 
-                        {/* Floating badges */}
-                        <div className="absolute -right-4 top-20 bg-white p-3 rounded-xl shadow-lg border border-neutral-border animate-bounce [animation-duration:3s]">
-                            <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary">
-                                    🤖
-                                </div>
-                                <div>
-                                    <p className="text-xs text-gray-500">AI Status</p>
-                                    <p className="text-sm font-bold text-gray-900">Active</p>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
 
                 </div>
