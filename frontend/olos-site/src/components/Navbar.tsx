@@ -4,10 +4,14 @@ export default function Navbar() {
     return (
         <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-neutral-border">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-16 items-center">
+                <div className="flex justify-between h-24 items-center">
                     <div className="flex-shrink-0 flex items-center">
-                        <Link href="/" className="text-2xl font-bold tracking-tight text-foreground">
-                            Olos
+                        <Link href="/" className="flex items-center">
+                            <img
+                                src="https://i.ibb.co/PGV5RC4t/olos-Logo.avif"
+                                alt="Olos Logo"
+                                className="h-20 w-auto object-contain" // Further increased height
+                            />
                         </Link>
                     </div>
                     <div className="hidden md:flex space-x-8 items-center">
