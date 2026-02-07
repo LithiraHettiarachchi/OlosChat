@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import PricingSection from "@/components/PricingSection";
 import AIChatSection from "@/components/AIChatSection";
+import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ServicesSection />
       <PricingSection />
       <AIChatSection />
+      <ContactSection />
 
       {/* Simple Footer just to round it off */}
       <footer className="py-10 border-t border-neutral-border mt-auto">
