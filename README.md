@@ -19,9 +19,8 @@
 ## 🛠️ Tech Stack
 
 - **Backend:** Node.js + Express / NestJS (REST API & business logic)  
-- **Frontend:** Next.js + React (Dashboard & Admin Interface)  
-- **Database:** PostgreSQL (business data, users)  
-- **Vector Store:** FAISS / Chroma (for embeddings)  
+- **Frontend:** Next.js + React (Dashboard, Chat Space & Admin Interface)  
+- **Database:** Supabase (business data, users)  
 - **AI Model:** OpenAI GPT API or open-source LLM  
 - **Authentication:** JWT-based auth  
 - **Deployment:** Dockerized environment  
